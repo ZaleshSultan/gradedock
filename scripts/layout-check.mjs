@@ -1,0 +1,3 @@
+import {chromium} from '@playwright/test';
+const browser=await chromium.launch({channel:'chrome',headless:true});const page=await browser.newPage({viewport:{width:320,height:844}});await page.goto('http://127.0.0.1:4173');await page.getByRole('button',{name:'Посмотреть демо'}).click();
+console.log(await page.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth,overflow:[...document.querySelectorAll('*')].map(el=>({tag:el.tagName,cls:el.className,x:el.getBoundingClientRect().x,right:el.getBoundingClientRect().right,width:el.getBoundingClientRect().width})).filter(x=>x.right>innerWidth+1||x.x< -1).slice(0,30)})));await page.screenshot({path:'store-assets/layout-320.png'});await browser.close();
