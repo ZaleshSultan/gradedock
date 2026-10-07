@@ -2,6 +2,12 @@ name: Check GradeDock
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - 'docs/**'
+      - 'store-assets/**'
+      - 'scripts/**'
+      - '**/*.md'
+      - 'LICENSE'
   pull_request:
 permissions:
   contents: read

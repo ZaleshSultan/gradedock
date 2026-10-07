@@ -33,3 +33,18 @@ test('mobile layouts avoid horizontal overflow and do not make remote requests',
   const remote:string[]=[];page.on('request',r=>{if(!r.url().startsWith('http://127.0.0.1:4173')&&!r.url().startsWith('data:'))remote.push(r.url());});
   await demo(page);for(const width of [320,390,768]){await page.setViewportSize({width,height:844});expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);await page.getByRole('button',{name:'Настройки',exact:true}).click();expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);await page.getByRole('button',{name:'Предметы',exact:true}).click();}expect(remote).toEqual([]);
 });
+
+test('offline policy and licenses open inside a dismissible dialog',async({page})=>{
+  await demo(page);await page.getByRole('button',{name:'Настройки',exact:true}).click();
+  await page.getByRole('button',{name:'Конфиденциальность',exact:true}).click();
+  await dialog(page).getByRole('button',{name:'Политика конфиденциальности',exact:true}).click();
+  await expect(page.frameLocator('.document-frame').getByRole('heading',{name:'GradeDock Privacy Policy',exact:true})).toBeVisible();
+  expect(new URL(page.url()).pathname).toBe('/');
+  await dialog(page).getByRole('button',{name:'Закрыть / Close'}).click();
+  await expect(page.getByRole('heading',{name:'Настройки',exact:true})).toBeVisible();
+  await page.getByRole('button',{name:'Лицензии компонентов',exact:true}).click();
+  await expect(page.frameLocator('.document-frame').locator('body')).toContainText('MIT');
+  await dialog(page).getByRole('button',{name:'Закрыть / Close'}).click();
+  await page.getByRole('button',{name:'Предметы',exact:true}).click();
+  await expect(page.locator('.forecast-value')).toContainText('82,5');
+});

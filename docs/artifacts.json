@@ -1,0 +1,32 @@
+{
+  "artifacts": [
+    {
+      "assets": {
+        "matchedDistAssets": 10,
+        "nativeLibraries": 0
+      },
+      "file": "GradeDock-1.0.0-debug.apk",
+      "bytes": 4207446,
+      "signing": "Android debug key; testing only",
+      "sha256": "27dcb3efe0e17e3cd50b9cff2bef6e938d0120032aebc0a88d26a57ab5856ab2"
+    },
+    {
+      "assets": {
+        "matchedDistAssets": 10,
+        "nativeLibraries": 0
+      },
+      "file": "GradeDock-1.0.0-unsigned.aab",
+      "bytes": 3088146,
+      "signing": "Unsigned; owner upload key required",
+      "sha256": "9bd302cbc7fe159c8a57f414aeb342c6e9a72f97c456eb29b5ad35a672ec5013"
+    }
+  ],
+  "versionCode": 1,
+  "package": "com.zaleshsultan.gradedock",
+  "app": "GradeDock",
+  "minimumSdk": 24,
+  "internetPermission": false,
+  "androidAutomaticBackup": false,
+  "targetSdk": 36,
+  "version": "1.0.0"
+}

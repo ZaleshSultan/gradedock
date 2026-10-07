@@ -15,6 +15,8 @@ An offline Android planner that answers **“What average score do I need on my 
 
 This is a planning estimate, not an official university result. Enter the actual syllabus weights. Separate minimum exam requirements, curved grading, bonus credit and university-specific GPA rules are outside this MVP.
 
+<img src="store-assets/screenshot-ru-1-forecast-1080x1920.png" width="270" alt="GradeDock weighted grade forecast on Android" />
+
 ## Calculation
 
 For each completed assessment: `contribution = points / maxPoints × weight`.
@@ -41,6 +43,8 @@ cd android
 ```
 
 On Windows use `gradlew.bat`. Set `JAVA_HOME` to JDK 21 and `ANDROID_HOME` to your SDK. The repository does not contain machine-specific paths or credentials. If the browser for UI tests is not installed, run `pnpm exec playwright install chromium`. The tests can also use an installed Chrome or Edge through `PLAYWRIGHT_CHANNEL=chrome` / `msedge`.
+
+On a 16 GB PC, group edits and use incremental builds. Gradle is limited to two workers and a 1536 MB heap. Reuse one emulator, with `-gpu host` and hardware virtualization for a new session. TypeScript, Vite, tests and Gradle run on the CPU. Resource and validation details are in `docs/validation.md`.
 
 Generate graphics with `pnpm assets` after the Android directory exists. Dependencies are locked in `pnpm-lock.yaml`; reviewed install scripts are limited to esbuild and sharp.
 

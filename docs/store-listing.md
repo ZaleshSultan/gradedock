@@ -18,7 +18,7 @@ GradeDock: План оценок
 
 Сколько нужно набрать на оставшихся работах, чтобы получить нужную итоговую оценку? GradeDock помогает спланировать результат по введённым вами баллам и весам.
 
-Добавьте курс, задайте целевую оценку и внесите работы: название, вес в итоговой оценке, максимальный балл и уже полученный результат. Будущие работы оставьте без оценки — GradeDock покажет, какой средний результат на них нужен для достижения цели.
+Добавьте курс, задайте целевую оценку и внесите работы: название, вес в итоговой оценке, максимальный балл и уже полученный результат. Будущие работы оставьте без оценки — GradeDock покажет, какой средневзвешенный результат на них нужен для достижения цели.
 
 ЧТО МОЖНО ДЕЛАТЬ
 
@@ -54,7 +54,7 @@ Plan the scores you need. Weighted grades, course goals and offline backups.
 
 What scores do you need on your remaining assessments to reach your course goal? GradeDock helps you plan using the scores and weights you enter.
 
-Add a course, set a target grade and enter its assessments: name, weight, maximum score and any result you have already received. Leave future scores blank. GradeDock shows the average score needed on the remaining assessments to reach your target.
+Add a course, set a target grade and enter its assessments: name, weight, maximum score and any result you have already received. Leave future scores blank. GradeDock shows the weighted average score needed on the remaining assessments to reach your target.
 
 WHAT YOU CAN DO
 
@@ -84,14 +84,16 @@ GradeDock is an independent planning tool. It does not connect to university sys
 
 Это рабочие поисковые темы для рекламных текстов, сайта и исследования карточки. В стандартной карточке Google Play нет отдельного поля ASO keywords, соответствующего полю Apple App Store; не вставляйте эти списки в название или описание. Выберите доступные в Console category/tags, которые действительно описывают приложение. Лимиты текста: 30 / 80 / 4000; повторяющиеся или нерелевантные ключевые слова могут нарушать правила. [Поля карточки и категоризация Google Play](https://support.google.com/googleplay/android-developer/answer/9859152?hl=en)
 
-## Тексты для четырёх скриншотов
+## Готовые скриншоты и подписи
 
-| Кадр | RU | EN | Что показывать |
+Уже подготовлены восемь реальных Android-скриншотов — четыре на русском и четыре на английском, 1080×1920. Загружайте файлы в следующем порядке, отдельно для каждой локали. Файлы уже содержат UI, дополнительные подписи ниже — вариант текста для будущих промоматериалов, не утверждение о надписи на изображении.
+
+| Кадр и файлы в `store-assets/` | RU | EN | Что показано |
 |---|---|---|---|
-| 1 | Все курсы под рукой | Your courses at a glance | Реальный обзор курсов с демо-данными |
-| 2 | Баллы и веса без путаницы | Scores and weights, clearly | Детали курса с выполненными и пустыми работами |
-| 3 | Узнайте, сколько нужно до цели | Know what your target needs | Целевая оценка и необходимый средний результат |
-| 4 | Офлайн. С локальной копией. | Offline, with local backups | Настройки и экспорт/импорт JSON |
+| 1 · `screenshot-ru-1-forecast-1080x1920.png` / `screenshot-en-1-forecast-1080x1920.png` | Узнайте, сколько нужно до цели | Know what your target needs | Прогноз выбранного курса, цель и необходимый средневзвешенный результат; экран прокручен до расчёта |
+| 2 · `screenshot-ru-2-scores-1080x1920.png` / `screenshot-en-2-scores-1080x1920.png` | Баллы и веса без путаницы | Scores and weights, clearly | Работы курса с баллами, весами и ещё не полученными результатами |
+| 3 · `screenshot-ru-3-plan-1080x1920.png` / `screenshot-en-3-plan-1080x1920.png` | Ближайшие работы в одном списке | Your upcoming work in one list | План предстоящих работ с датами; без уведомлений и календарной синхронизации |
+| 4 · `screenshot-ru-4-backup-1080x1920.png` / `screenshot-en-4-backup-1080x1920.png` | Офлайн. С локальной копией. | Offline, with local backups | Настройки, локальный экспорт и импорт JSON |
 
 Подписи не должны перекрывать важные элементы UI. Не использовать настоящие личные оценки, имена студентов, изображения чужих университетов или обещания уведомлений.
 
